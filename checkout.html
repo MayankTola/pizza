@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+<link rel="stylesheet" href="assets/css/animate-3.7.0.css">
+<link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+<link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+<link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+<link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="checkout-page">
+
+<div id="site">
+	<header class="header-area header-area2">
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-2">
+										<div class="logo-area">
+												<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+										</div>
+								</div>
+								<div class="col-lg-10">
+										<div class="custom-navbar">
+												<span></span>
+												<span></span>
+												<span></span>
+										</div>
+										<div class="main-menu main-menu2">
+												<ul>
+														<li class="active"><a href="index.html">home</a></li>
+														<li><a href="#">about</a></li>
+														<li><a href="shop.html">menu</a></li>
+
+
+														<li><a href="cart.html">Cart</a></li>
+												</ul>
+										</div>
+								</div>
+						</div>
+				</div>
+		</header>
+
+		<section class="banner-area banner-area2 menu-bg text-center">
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-12">
+										<h1><i>Checkout</i></h1>
+								</div>
+						</div>
+				</div>
+		</section>
+	<div id="content">
+		<h1>Checkout</h1>
+			<table id="checkout-cart" class="shopping-cart">
+			  <thead>
+				<tr>
+					<th scope="col">Item</th>
+					<th scope="col">Qty</th>
+					<th scope="col">Price</th>
+				</tr>
+			  </thead>
+			  <tbody>
+
+			  </tbody>
+			</table>
+		 <div id="pricing">
+
+			<p id="shipping">
+				<strong>Shipping</strong>: <span id="sshipping"></span>
+			</p>
+
+			<p id="sub-total">
+				<strong>Total</strong>: <span id="stotal"></span>
+			</p>
+		 </div>
+
+		 <form class="form" action="order.html" method="post" id="checkout-order-form">
+		 	<h2 style="color:black;">Your Details</h2>
+
+		 	<fieldset id="fieldset-billing">
+		 		<legend>Billing</legend>
+		 		<div>
+		 			<label for="name">Name</label>
+		 			<input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="email">Email</label>
+		 			<input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="city">City</label>
+		 			<input type="text" name="city" id="city" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="address">Address</label>
+		 			<input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="zip">ZIP Code</label>
+		 			<input type="text" name="zip" id="zip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="country">Country</label>
+		 			<select name="country" id="country" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Select</option>
+						<option value="IN">India</option>
+						<option value="GE">Germany</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+		 	
+
+		 	<p><input type="submit" id="submit-order" value="Submit" class="template-btn mt-3" /></p>
+
+		 </form>
+	</div>
+
+
+
+</div>
+
+</body>
+</html>
