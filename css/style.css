@@ -12,6 +12,7 @@ html, body {
 }
 
 body {
+	
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -215,7 +216,7 @@ body#checkout-page #site-info {
 	border: 1px solid #ddd;
 }
 
-.shopping-cart tr:nth-child(even){background-color: #f2f2f2},
+.shopping-cart tr:nth-child(even){background-color: #f2f2f2}
 
 .shopping-cart td.pdelete {
 	text-align: center;
