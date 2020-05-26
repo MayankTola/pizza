@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pizza Hub</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
+  <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+  <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+/* * {box-sizing: border-box;} */
+.container,
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.frame {
+    width: 500px;
+    height: 500px;
+    /* z-index: 10; */
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    height: 130px;
+    width: 400px;
+    top: 135px;
+    left: 70px;
+    perspective: 60px;
+    transform-style: preserve-3d;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+
+}
+
+.card-1 {
+    animation: animate1 5s linear infinite;
+}
+
+.card-2 {
+    animation: animate2 5s linear infinite;
+}
+
+.card-3 {
+    animation: animate3 5s linear infinite;
+}
+
+
+
+@keyframes animate1 {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        transform: translate3d(200px, 0, -45px);
+    }
+    50% {
+        transform: translate3d(-200px, 0, -45px);
+    }
+}
+
+@keyframes animate2 {
+    0%, 100% {
+        transform: translate3d(200px, 0, -45px);
+    }
+    25% {
+        transform: translate3d(-200px, 0, -45px);
+    }
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes animate3 {
+    0%, 100% {
+        transform: translate3d(-200px, 0, -45px);
+    }
+    25% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(200px, 0, -45px);
+    }
+}
+.img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+}
+
+@media screen and (max-width: 1260px) {
+    .back {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .back {
+        width: 100%;
+    }
+}
+
+.button_base {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.button_base:hover {
+    cursor: pointer;
+}
+    .b07_3d_double_roll {
+      perspective: 500px;
+      -webkit-perspective: 500px;
+      -moz-perspective: 500px;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+  }
+
+  .b07_3d_double_roll div {
+      position: absolute;
+      text-align: center;
+      padding: 10px;
+      border: #000000 solid 1px;
+      pointer-events: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+  }
+
+  .b07_3d_double_roll div:nth-child(1) {
+      color: white;
+      background-color: black;
+      z-index: 0;
+      width: 100%;
+      height: 50px;
+      clip: rect(0px, 100px, 50px, 0px);
+      position: absolute;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b07_3d_double_roll div:nth-child(2) {
+      color: #000000;
+      background-color: #000000;
+      z-index: -1;
+      width: 100%;
+      height: 50px;
+      clip: rect(0px, 100px, 50px, 0px);
+      position: absolute;
+      transform: rotateX(90deg);
+      -webkit-transform: rotateX(90deg);
+      -moz-transform: rotateX(90deg);
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b07_3d_double_roll div:nth-child(3) {
+      color: white;
+      background-color: black;
+      z-index: 0;
+      width: 100%;
+      height: 50px;
+      clip: rect(0px, 200px, 50px, 100px);
+      position: absolute;
+      transition: all 0.2s ease 0.1s;
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b07_3d_double_roll div:nth-child(4) {
+      color: #000000;
+      background-color: #000000;
+      z-index: -1;
+      width: 100%;
+      height: 50px;
+      clip: rect(0px, 200px, 50px, 100px);
+      position: absolute;
+      transform: rotateX(-90deg);
+      -webkit-transform: rotateX(-90deg);
+      -moz-transform: rotateX(-90deg);
+      transition: all 0.2s ease 0.1s;
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b07_3d_double_roll:hover div:nth-child(1) {
+      background-color: #000000;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform: rotateX(-90deg);
+      -webkit-transform: rotateX(-90deg);
+      -moz-transform: rotateX(-90deg);
+  }
+
+  .b07_3d_double_roll:hover div:nth-child(2) {
+      color: #ffffff;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+  }
+
+  .b07_3d_double_roll:hover div:nth-child(3) {
+      background-color: #000000;
+      transition: all 0.2s ease 0.1s;
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      transform: rotateX(90deg);
+      -webkit-transform: rotateX(90deg);
+      -moz-transform: rotateX(90deg);
+  }
+
+  .b07_3d_double_roll:hover div:nth-child(4) {
+      color: #ffffff;
+      transition: all 0.2s ease 0.1s;
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+  }
+
+  .png{
+    width:100%;
+  }
+  .parallax {
+    /* The image used */
+    background-image: url("images/pizza-back.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .car-img{
+    width: 1100px;
+    height: 500px;
+  }
+
+  .logo{
+    width:50px;
+    /* height:auto; */
+  }
+
+  .scroll{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: grey;
+  }
+</style>
+</head>
+
+<body>
+  <header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-area">
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="custom-navbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="main-menu">
+                        <ul>
+                            <li class="active"><a href="index.html">home</a></li>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="shop.html">menu</a></li>
+
+
+                            <li><a href="cart.html">Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/pizza1.jpg" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3 style="color:white;">Indi Chicken Tikka</h3>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/pizza2.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3 style="color:white;">CHICKEN FIESTA</h3>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/pizza3.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3 style="color:white;">PEPPER BARBECUE</h3>
+
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+<div class="parallax">
+<div class="container">
+        <div class="frame">
+            <div class="center">
+                <div class="card card-1">
+                    <img class="img" src="images/pizza2.jpg"></img>
+                    <a href="shop.html"><h3 class="scroll" style="align:center;">Mexican Green Wave</h3></a>
+                </div>
+                <div class="card card-2">
+                    <img class="img" src="images/pizza1.jpg"></img>
+                    <a href="shop.html"><h3 class="scroll" style="align:center;">PANEER MAKHANI</h3></a>
+                </div>
+                <div class="card card-3">
+                      <img class="img" src="images/pizza3.jpg"></img>
+                      <a href="shop.html"><h3 class="scroll" style="align:center;">FRESH VEGGIE</h3></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <a href="shop.html">
+      <div class="button_base b07_3d_double_roll">
+          <div>See Menu</div>
+          <div>See Menu</div>
+          <div>See Menu</div>
+          <div>See Menu</div>
+      </div>
+      </a>
+
+      <section class="welcome-area section-padding2">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-6 align-self-center">
+                      <div class="welcome-img">
+                          <img src="assets/images/welcome-bg.png" class="img-fluid" alt="">
+                      </div>
+                  </div>
+                  <div class="col-md-6 align-self-center">
+                      <div class="welcome-text mt-5 mt-md-0">
+                          <h3><span class="style-change">welcome</span> <br>to pizza HUB  </h3>
+                          <p class="pt-3">Created god gathered don't you yielding herb you had. And isn't, god was saw. Dominion. Great sixth for in unto was. Open can't tree am waters brought. Divide after there. Was.</p>
+                          <p>Created god gathered don't you yielding herb you had. And isn't, god was saw. Dominion. Great sixth for in unto was. Open can't tree waters brought. Divide after there. Was. Created god gathered don't you yielding herb you had. And isn't god.</p>
+                          <a href="#" class="template-btn mt-3">see menu</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+
+      <!-- Testimonial Area End -->
+      <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+      <script src="assets/js/vendor/wow.min.js"></script>
+      <script src="assets/js/vendor/owl-carousel.min.js"></script>
+      <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
+      <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+      <script src="assets/js/main.js"></script>
+
+
+<!-- <footer id="site-info">
+		Copyright &copy; Winery
+	</footer> -->
+
+</body>
+</html>
